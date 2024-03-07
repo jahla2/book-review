@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     use HasFactory;
+
+    public function reviews()
+    {
+        //Book can many have many revies
+        return $this->hasMany(Review::class);
+    }
 }
